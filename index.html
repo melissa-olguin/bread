@@ -1,1 +1,93 @@
+<!DOCTYPE html>
 
+<htmllang="en">
+    <head>
+        <title>About Us</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">   
+    </head>
+    <body>
+            <!-- Wrapper -->
+        <div id="wrapper">
+
+             <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo-container">
+                    <img src="images/bakery-logo_c.png" class = "logo" alt="North Star Bakery Logo"> North Star Bakery
+                </a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li class="active"><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+
+                <!-- About Me -->
+                <section id="about" class="one">
+                    <div class="container">
+
+                        <h1>Welcome to North Star Bakery</h1>
+
+                        <img src="images/bakery-storefront_c.png" alt="Bakery Image" class="image featured" />
+            
+                         </div>
+                </section>
+            </div>
+
+
+
+
+
+
+        <!--contact form-->
+       	<section>
+			<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
+                <h2>Contact Form</h2>
+				<div class="fields">
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
+					</div>
+					<div class="field">
+						<div data-netlify-recaptcha='true'></div>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Send Message" /></li>
+					<li><input type="reset" value="Reset" /></li>
+					<li><input type="checkbox" id="demo-human" name="demo-human" checked>
+
+				</ul>
+			</form>
+		</section>
+        <!-- Footer -->
+        <footer id="footer">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:melissa.olguin25@gmail.com?&subject=Just%20saw%20your%20Website" > <i class="fa-regular fa-envelope"></i>Email Us</a></li>
+            <li><a href="tel:+15551234567"><i class="fa-solid fa-phone"></i>Call Us: (555) 123-4567</a></li>
+        </footer>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 html, body, div, h1, h2, h3, p, form, input, button {
-    margin: 0;
+    margin: 0px;
     padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -39,19 +39,77 @@ html, body, div, h1, h2, h3, p, form, input, button {
     display: block;
 }
 
-nav a {
-display: block;
-width: 100px;
-padding: 10px;
-text-align: center;
-background-color: #333;
-color: white;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 2.5 em;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #lightbrown;
+nav {
+    background-color: #70733;
+    height: 4rem;
+    line-height: 4rem;
+    margin: .5rem auto 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
+nav ul {
+    flex-direction: column;
+    display: flex;
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    width: 6em;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #6d5a04;
+    color: white;
+    flex: 0 1 auto;
+    border: 1px solid #4907ff;
+
+}
+
+@media  screen and (min-width: 768px) {
+    nav ul{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        justify-content: space-evenly;
+    }
+}
+
+
+
+p {
+    padding: 10px 0;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
 }

@@ -45,10 +45,14 @@
                         <img src="images/bakery-bread_c.png" alt="bread" class="image featured" />
                         <img src="images/bakery-feature-large_c.png" alt="cookies" class="image featured" />
                         <img src="images/bakery-feature-small_c.png" alt="cupcakes" class="image featured" />
+                        
+                       
                         <img src="images/bakery-signature-loaf_c.png" alt="pastries" class="image featured" />
+                       <!--Video-->
                         <video autoplay controls width="640" height="360"> <source src="assets/bakery-behind-scenes.mp4" type="video/mp4">
+                            <p>Your browser doesn't support video <a href="assets/bakery-behind-scenes.mp4">link to download the video</a> instead.</p>
                         </video>
-            
+                       
                          </div>
                 </section>
             </div>
@@ -62,36 +66,34 @@
        	<section>
 			<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
                 <h2>Contact Form</h2>
-				<div class="fields">
-					<div class="field">
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name" />
-					</div>
-					<div class="field">
+					<fieldset>
+                        <legend>Your Information</legend>
+						<label for="name">Full Name</label>
+						<input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middlie Last Name"/>
+
 						<label for="email">Email</label>
-						<input type="text" name="email" id="email" />
-					</div>
-					<div class="field">
+						<input type="email" name="email" id="email" required placeholder="youremail@gmail.com"/>
+                    </fieldset>
+					<fieldset>
+                        <ledgend>Your Message</legend>
 						<label for="message">Message</label>
-						<textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
-					</div>
-					<div class="field">
-						<div data-netlify-recaptcha='true'></div>
-					</div>
+						<textarea name="message" id="message" placeholder="How can we help you?" rows="3"  required minlength="10"></textarea>
+                    </fieldset>
+
 				</div>
 				<ul class="actions">
 					<li><input type="submit" value="Send Message" /></li>
 					<li><input type="reset" value="Reset" /></li>
-					<li><input type="checkbox" id="demo-human" name="demo-human" checked>
 
 				</ul>
 			</form>
 		</section>
         <!-- Footer -->
         <footer id="footer">
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="mailto:melissa.olguin25@gmail.com?&subject=Just%20saw%20your%20Website" > <i class="fa-regular fa-envelope"></i>Email Us</a></li>
-            <li><a href="tel:+15551234567"><i class="fa-solid fa-phone"></i>Call Us: (555) 123-4567</a></li>
+            
+            <p><a href="mailto:melissa.olguin25@gmail.com?&subject=Just%20saw%20your%20Mock%20Bakery%20Website" > Email Us: info@nsbake.com</a></li>
+            <p><a href="tel:+15551234567">Call Us: (555) 123-4567</a></p>
+            <p>&copy; 2026 North Star Bakery</p>
         </footer>
         
         <script src="js/script.js"></script>

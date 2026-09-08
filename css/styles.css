@@ -12,9 +12,39 @@ html, body, div, h1, h2, h3, p, form, input, button {
 
 #header {
     background-color: #f8f8f8;
-    padding: 20px;
+    padding: 1 em;
     text-align: center;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 4em;
+    color: #6d5a04;
+    background-color: #e7cda6;
+}
+
+.logo {
+    width: 2.5em; 
+    height: auto; 
+    display: block;
+}
+
+#footer {
+    background-color: #6d5a04;
+    padding: .5em;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+
 #wrapper {
     background-color: #d81a1a;
     padding: 20px;
@@ -23,21 +53,7 @@ html, body, div, h1, h2, h3, p, form, input, button {
     background-image:url(../images/bakery-signature-loaf_c.png);
     background-size: cover;
 }
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 4em;
-    color: #333;
-    background-color: #e7cda6;
-}
 
-.logo {
-    width: 2em; 
-    height: auto; 
-    display: block;
-}
 
 /* I Hate Nav bars don't waste any more time on this */
 

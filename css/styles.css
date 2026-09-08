@@ -39,64 +39,77 @@ html, body, div, h1, h2, h3, p, form, input, button {
     display: block;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 2.5 em;
-}
+/* I Hate Nav bars don't waste any more time on this */
 
 nav {
     background-color: #70733;
-    height: 4rem;
-    line-height: 4rem;
-    margin: .5rem auto 0 auto;
-    padding: 0 1rem;
+    line-height: 4em;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    box-sizing: border-box;
-    display: inline-block;
-    position: sticky;
-    top: 0;
+    display: flex;
+    position: relative;
     z-index: 100;
+    box-sizing: border-box;
 }
 
 nav ul {
     flex-direction: column;
     display: flex;
     list-style: none;
-    display: flex;
-    justify-content: left;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    
-    justify-content: space-between;
+    width: 100%;
+}
+
+nav li {/* missing link to fix nav to hours to find */
+    flex: 1 1 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav a {
     text-decoration: none;
-    display: block;
-    width: 6em;
-    padding: 1.5rem;
+    display: flex;
+    width: 100%;
+    padding: 0;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 100%;
     background-color: #6d5a04;
     color: white;
-    flex: 0 1 auto;
+    flex: 1 1 0;
     border: 1px solid #4907ff;
+    white-space: nowrap;
+    box-sizing: border-box;
 
+
+}
+nav a:hover {
+    background-color: #555; 
+    color: #ffcc00; 
 }
 
 @media  screen and (min-width: 768px) {
     nav ul{
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
         
         justify-content: space-evenly;
     }
 }
 
-
+/*text img and video styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 2.5 em;
+}
 
 p {
     padding: 10px 0;
@@ -112,4 +125,60 @@ img {
 video {
   width: 100%;
   height: auto;
+}
+
+/*form stuff */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-image: linear-gradient(to right, #ad7d14, #ababd8);
+    max-width: 100%;
+    border-radius: 8px;
+}
+#contact {
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+}
+
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #555;
 }

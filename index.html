@@ -63,9 +63,13 @@
 
 
         <!--contact form-->
-       	<section>
-			<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
-                <h2>Contact Form</h2>
+       	<section class="contact">
+            <div class="container">
+			<!-- not sure if I will create a real form, save for later use  -->
+            <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
+            -->
+                <form action="/submit" method="post">
+                <h2>Request Form</h2>
 					<fieldset>
                         <legend>Your Information</legend>
 						<label for="name">Full Name</label>
@@ -74,18 +78,28 @@
 						<label for="email">Email</label>
 						<input type="email" name="email" id="email" required placeholder="youremail@gmail.com"/>
                     </fieldset>
+                    <fieldset>
+                        <legend>Request Details</legend>
+                        <label for="pickup-date">Pickup Date</label>
+                        <input type="date" id="pickup-date" name="pickup_date">
+
+                        <label for="request-type">Request Type</label>
+                        <select id="request-type" name="request_type">
+                        <option value="preorder">Pre-Order</option>
+                        <option value="question">General Question</option>
+                        <option value="event">Event Inquiry</option>
+                        </select>
+                    </fieldset>
 					<fieldset>
-                        <ledgend>Your Message</legend>
+                        <legend>Your Message</legend>
 						<label for="message">Message</label>
 						<textarea name="message" id="message" placeholder="How can we help you?" rows="3"  required minlength="10"></textarea>
                     </fieldset>
-
+                        <input type="submit" value="Send Message" />
+                        <input type="reset" value="Reset" />
+                 </form>
 				</div>
-				<ul class="actions">
-					<li><input type="submit" value="Send Message" /></li>
-					<li><input type="reset" value="Reset" /></li>
-
-				</ul>
+			
 			</form>
 		</section>
         <!-- Footer -->

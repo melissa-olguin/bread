@@ -7,7 +7,25 @@ html, body, div, h1, h2, h3, p, form, input, button {
     font-family: Arial, sans-serif;
 	vertical-align: baseline;    
     box-sizing: border-box;
+    color: #684637;
     
+}
+h1{
+
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+p {
+    font-size: 1.2em;
+    margin-bottom: .5em;
 }
 
 #header {
@@ -21,26 +39,33 @@ html, body, div, h1, h2, h3, p, form, input, button {
     justify-content: center;
     text-decoration: none;
     font-size: 4em;
-    color: #6d5a04;
-    background-color: #e7cda6;
+    color: #684637;
+    background-color:  #7d7e77;
 }
-
+/* logo colors are dark brown #684637 and  light #c19e84 */
+/* logo colors are orange #684637 and  yellow #ffcc00 */
+/* logo colors are tan  #ebaa79 and  light #c19e84 */
+/* logo colors are gray like store #7d7e77 and  light #c19e84 */
 .logo {
     width: 2.5em; 
     height: auto; 
     display: block;
+
+}
+.star {
+    color: #ffcc00; 
 }
 
 #footer {
-    background-color: #6d5a04;
+    background-color: #c19e84;
     padding: .5em;
     text-align: center;
     font-size: 0.9em;
-    color: #666;
+    color: #684637;
 }
 
 #footer a {
-    color: #000;
+    color: #684637;
     text-decoration: none;
 }
 
@@ -58,7 +83,6 @@ html, body, div, h1, h2, h3, p, form, input, button {
 /* I Hate Nav bars don't waste any more time on this */
 
 nav {
-    background-color: #70733;
     line-height: 4em;
     margin: 0;
     padding: 0;
@@ -95,17 +119,18 @@ nav a {
     justify-content: center;
     height: 5rem;
     width: 100%;
-    background-color: #6d5a04;
-    color: white;
+    background-color: #c19e84;
+    color: #684637;
     flex: 1 1 0;
-    border: 1px solid #4907ff;
+    border: 1px solid #ebaa79;
     white-space: nowrap;
     box-sizing: border-box;
+    text-size: 1.2em;
 
 
 }
 nav a:hover {
-    background-color: #555; 
+    background-color:  #918d81; 
     color: #ffcc00; 
 }
 
@@ -129,9 +154,7 @@ body {
 
 p {
     padding: 10px 0;
-    font-size: 1.5em;
     line-height: 1.6em;
-    color: #333;
 }
 img {
   max-width: 100%;

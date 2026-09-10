@@ -16,16 +16,26 @@ h1{
     margin-bottom: 0.5em;
 }
 h2 {
-    font-size: 2em;
+    font-size: 2.25em;
     margin-bottom: 0.5em;
+    border-bottom: 2px solid #ffcc00;
 }
 h3 {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 0.5em;
 }
 p {
     font-size: 1.5em;
     margin-bottom: .5em;
+}
+figcaption {
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: #684637;
 }
 
 #header {
@@ -54,7 +64,7 @@ p {
 
 }
 .star {
-    color: #c19e84; 
+    color: #e6b16b; 
 }
 
 #footer {
@@ -66,7 +76,7 @@ p {
 }
 
 #footer a {
-    background-color: #c19e84;
+    background-color: #e6b16b;
     color: #684637;
     text-decoration: none;
 }
@@ -159,8 +169,6 @@ nav a:hover {
 
 /*text img and video styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 2.5 em;
 }
@@ -199,6 +207,8 @@ fieldset {
     border-radius: 4px;
     padding: 1rem;
     margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 legend {
@@ -221,8 +231,8 @@ input, textarea, select {
 }
 
 button {
-    background-color: #ffcc00;
-    color: #7d7e77;
+    background-color: #7d7e77e0;
+    color: #e6b16b;
     padding: 0.75rem 1.5rem;
     margin: .5rem 1rem;
     border: none;
@@ -232,6 +242,6 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #7d7e77;
     color: #ffcc00;
 }

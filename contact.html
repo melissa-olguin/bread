@@ -1,60 +1,94 @@
-<!doctype html>  
-	<html lang="en">  
-        <head> 
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
-            <meta charset="utf-8" /> 
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">   
+    </head>
+    <body>
+            <!-- Wrapper -->
+        <div id="wrapper">
+
+             <!-- Header -->
+            <header id="header" >
+                <a href="index.html" class="logo-container" >
+                    <img src="images/bakery-logo-t.png" class = "logo" alt="North Star Bakery Logo"> 
+                    <p>North Star <span class="star">Bakery</span> </p>
+                </a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li class="active"><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+
+                <!--contact form-->
+                    <section class="contact">
+                    
+                        <!-- not sure if I will create a real form, save for later use  -->
+                        <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
+                        -->
+                            <form action="/submit" method="post">
+                            <h1>Pre-Order and Inquiry Form</h1>
+                                <fieldset>
+                                    <legend>Your Information</legend>
+                                    <label for="name">Full Name</label>
+                                    <input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middle Last Name"/>
+
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" required placeholder="your.email@gmail.com"/>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Request Details</legend>
+                                    <label for="pickup-date">Pickup Date</label>
+                                    <input type="date" id="pickup-date" name="pickup_date">
+
+                                    <label for="request-type">Request Type</label>
+                                    <select id="request-type" name="request_type">
+                                    <option value="preorder">Pre-Order</option>
+                                    <option value="question">General Question</option>
+                                    <option value="event">Event Inquiry</option>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Your Message</legend>
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="How can we help you? What are you interested in? I wanted to place a pre-order for..." rows="3"  required minlength="10"></textarea>
+                                </fieldset>
+                                    <button type="submit" value="Send Message" >Send Message</button>
+                                    <button type="reset" value="Reset" />Reset</button>
+                            </form>
+                    
+                    </section>
+            </div>
+
+
+
+
+
+
+  
+        <!-- Footer -->
+        <footer id="footer">
             
-            <title>About - Sample Form</title> 
-            
-        </head>  
-        <body> 
+            <p><a href="mailto:melolguin7@gmail.com?&subject=Just%20saw%20your%20Mock%20Bakery%20Website" > Email Us: info@nsbake.com</a></li>
+            <p><a href="tel:+15551234567">Call Us: (555) 123-4567</a></p>
+            <p><a href="#home">&copy; 2026 North Star Bakery</a></p>
+        </footer>
         
-            <h1>Join Our Newsletter</h1> 
-            
-            <form id="signup"> 
-            
-                <label>Name</label> 
-                
-                <input placeholder="Enter name"> 
-                <br>
-                <label>Email</label>
-                <input type="text" placeholder="jane@example.com"> 
-                <br>
-                <label>Phone</label> 
-                
-                <input type="tel"> 
-                <br>
-                
-                <label>Country</label> 
-                
-                <select> 
-                
-                <option value="">Select a country</option> 
-                
-                <option value="US">United States</option> 
-                
-                <option value="CA">Canada</option> 
-                
-                <option value="MX">Mexico</option> 
-                
-                </select> 
-                <br>
-                
-                <div> 
-                <input type="checkbox" id="promo" checked> 
-                
-                <label for="promo">Sign me up for promotional emails</label> 
-                
-                </div> 
-                <br>
-                
-                <button type="submit">Submit</button> 
-                
-                <button type="reset">Reset</button> 
-                
-                
-            
-            </form> 
-        
-	</body> 
+        <script src="js/script.js"></script>
+    </body>
 </html>

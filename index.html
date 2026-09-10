@@ -41,75 +41,28 @@
 
                         <h1>Welcome to North Star Bakery</h1>
                         <p>We are a fake bakery that has been serving the community for over 7 years.</p>
-                        <a href="products.html"><h2>&gt;&gt; Come look at our delicious baked goods! &lt;&lt;</h2></a>
+                        <a href="products.html" class = "homeCall"><button>Look at our delicious baked goods!</button></a>
 
-                        <a href="#products" target="_blank">
+                       
+                            <!--Video-->
+                        <video autoplay controls width="640" height="360"> <source src="assets/bakery-behind-scenes.mp4" type="video/mp4">
+                            <p>Your browser doesn't support video, You are missing out on bread baking on screen!</p>
+                        </video>
+                        
+                       
+                        <a href="contact.html"><button>Contact Us Or Pre-Order</button></a>
+                        <p></p>
+                        <a href="about.html"><button>More Information About Us</button></a>
+                        
+                         <a href="products.html">
                             <img src="images/bakery-storefront_c.png" alt="Bakery Image" class="image featured" />
                         </a >
                        
-                        <a href="products.html"><h2>&gt;&gt; Contact Us Or Pre-Order &lt;&lt;</h2></a>
-
-                        <a href="products.html"><h2>&gt;&gt; More Information About Us &lt;&lt;</h2></a>
-
-
-                        <img src="images/bakery-bread_c.png" alt="bread" class="image featured" />
-                        <img src="images/bakery-feature-large_c.png" alt="cookies" class="image featured" />
-                        <img src="images/bakery-feature-small_c.png" alt="cupcakes" class="image featured" />
-                        
-                       
-                        <img src="images/bakery-signature-loaf_c.png" alt="pastries" class="image featured" />
-                       <!--Video-->
-                        <video autoplay controls width="640" height="360"> <source src="assets/bakery-behind-scenes.mp4" type="video/mp4">
-                            <p>Your browser doesn't support video <a href="assets/bakery-behind-scenes.mp4">link to video</a></p>
-                        </video>
                        
                     </div>
                 </section>
             </div>
 
-
-
-
-
-
-        <!--contact form-->
-       	<section class="contact">
-          
-			<!-- not sure if I will create a real form, save for later use  -->
-            <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
-            -->
-                <form action="/submit" method="post">
-                <h2>Request Form</h2>
-					<fieldset>
-                        <legend>Your Information</legend>
-						<label for="name">Full Name</label>
-						<input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middlie Last Name"/>
-
-						<label for="email">Email</label>
-						<input type="email" name="email" id="email" required placeholder="youremail@gmail.com"/>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Request Details</legend>
-                        <label for="pickup-date">Pickup Date</label>
-                        <input type="date" id="pickup-date" name="pickup_date">
-
-                        <label for="request-type">Request Type</label>
-                        <select id="request-type" name="request_type">
-                        <option value="preorder">Pre-Order</option>
-                        <option value="question">General Question</option>
-                        <option value="event">Event Inquiry</option>
-                        </select>
-                    </fieldset>
-					<fieldset>
-                        <legend>Your Message</legend>
-						<label for="message">Message</label>
-						<textarea name="message" id="message" placeholder="How can we help you?" rows="3"  required minlength="10"></textarea>
-                    </fieldset>
-                        <button type="submit" value="Send Message" >Send Message</button>
-                        <button type="reset" value="Reset" />Reset</button>
-                 </form>
-		
-		</section>
         <!-- Footer -->
         <footer id="footer">
             

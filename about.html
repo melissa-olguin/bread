@@ -8,15 +8,18 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/styles.css"> 
+        <link rel="stylesheet" href="css/styles.css">  
     </head>
     <body>
             <!-- Wrapper -->
         <div id="wrapper">
 
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo"><img src="images/hakery-logo.png" alt="North Star Bakery Logo"> North Star Bakery</a>
+             <!-- Header -->
+            <header id="header" >
+                <a href="index.html" class="logo-container" >
+                    <img src="images/bakery-logo-t.png" class = "logo" alt="North Star Bakery Logo"> 
+                    <p>North Star <span class="star">Bakery</span> </p>
+                </a>
             </header>
 
             <!-- Nav -->
@@ -29,6 +32,7 @@
                 </ul>
             </nav>
 
+         
             <!-- Main -->
             <div id="main">
 
@@ -38,7 +42,7 @@
 
                         <h1>About Us</h1>
                         <h2>Our Location</h2>
-                        <a href="#products" target="_blank">
+                        <a href="products.html">
                             <img src="images/bakery-storefront_c.png" alt="Bakery Image" class="image featured" />
                         </a >
                         
@@ -68,45 +72,12 @@
                 </section>
             </div>
 
-
-
-
-
-
-        <!--contact form-->
-       	<section>
-			<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
-                <h2>Contact Form</h2>
-				<div class="fields">
-					<div class="field">
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name" />
-					</div>
-					<div class="field">
-						<label for="email">Email</label>
-						<input type="text" name="email" id="email" />
-					</div>
-					<div class="field">
-						<label for="message">Message</label>
-						<textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
-					</div>
-					<div class="field">
-						<div data-netlify-recaptcha='true'></div>
-					</div>
-				</div>
-				<ul class="actions">
-					<li><input type="submit" value="Send Message" /></li>
-					<li><input type="reset" value="Reset" /></li>
-					<li><input type="checkbox" id="demo-human" name="demo-human" checked>
-
-				</ul>
-			</form>
-		</section>
         <!-- Footer -->
         <footer id="footer">
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="mailto:melissa.olguin25@gmail.com?&subject=Just%20saw%20your%20Website" > <i class="fa-regular fa-envelope"></i>Email Us</a></li>
-            <li><a href="tel:+15551234567"><i class="fa-solid fa-phone"></i>Call Us: (555) 123-4567</a></li>
+            
+            <p><a href="mailto:melolguin7@gmail.com?&subject=Just%20saw%20your%20Mock%20Bakery%20Website" > Email Us: info@nsbake.com</a></li>
+            <p><a href="tel:+15551234567">Call Us: (555) 123-4567</a></p>
+            <p><a href="#home">&copy; 2026 North Star Bakery</a></p>
         </footer>
         
         <script src="js/script.js"></script>

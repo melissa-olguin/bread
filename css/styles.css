@@ -217,9 +217,10 @@ form {
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    background-image: linear-gradient(to right, #e6b16bee, #c19e84ee);
+    background-color: #7d7e778a;
     max-width: 100%;
     border-radius: 8px;
+    border: 1px solid #684637;
 }
 #contact {
     padding: 2rem;

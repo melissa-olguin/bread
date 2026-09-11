@@ -39,40 +39,54 @@
 
                 <!--contact form-->
                     <section class="contact">
-                    
-                        <!-- not sure if I will create a real form, save for later use  -->
-                        <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
-                        -->
-                            <form action="/submit" method="post">
-                            <h1>Pre-Order and Inquiry Form</h1>
-                                <fieldset>
-                                    <legend>Your Information</legend>
-                                    <label for="name">Full Name</label>
-                                    <input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middle Last Name"/>
+                        <div class="container">
+                                <h2>Our Location</h2>
+                                <a href="products.html">
+                                    <img src="images/bakery-storefront_c.png" alt="A picture of our lovely storefront.  Come visit us!" class="image featured" />
+                                </a >
+                                
+                                <a href="https://www.google.com/maps/search/?api=1&query=123+Main+St,+Springfield,+IL+62701">
+                                <p>123 Main St, Springfield, IL </p>
+                                <p>Click to open in Google Maps</p>
+                                </a>
+                                <h2>Our Hours</h2>
+                                <h3>Mon - Thur 10 am - 4 pm</h3>
+                                <h3>Fri - Sun  10 am - 6 pm</h3>
+                            <!-- not sure if I will create a real form, save for later use  -->
+                            <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
+                            -->
+                                <form action="/submit" method="post">
+                                <h2>Pre-Order and Inquiry Form</h2>
+                                    <fieldset>
+                                        <legend>Your Information</legend>
+                                        <label for="name">Full Name</label>
+                                        <input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middle Last Name"/>
 
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" required placeholder="your.email@gmail.com"/>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>Request Details</legend>
-                                    <label for="pickup-date">Pickup Date</label>
-                                    <input type="date" id="pickup-date" name="pickup_date">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email" required placeholder="your.email@gmail.com"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Request Details</legend>
+                                        <label for="pickup-date">Pickup Date</label>
+                                        <input type="date" id="pickup-date" name="pickup_date">
 
-                                    <label for="request-type">Request Type</label>
-                                        <select id="request-type" name="request_type">
-                                            <option value="preorder">Pre-Order</option>
-                                            <option value="question">General Question</option>
-                                            <option value="event">Event Inquiry</option>
-                                        </select>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>Your Message</legend>
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" placeholder="How can we help you? What are you interested in? I wanted to place a pre-order for..." rows="3"  required minlength="10"></textarea>
-                                </fieldset>
-                                    <button type="submit" value="Send Message" >Send Message</button>
-                                    <button type="reset" value="Reset" />Reset</button>
-                            </form>
+                                        <label for="request-type">Request Type</label>
+                                            <select id="request-type" name="request_type">
+                                                <option value="preorder">Pre-Order</option>
+                                                <option value="question">General Question</option>
+                                                <option value="event">Event Inquiry</option>
+                                            </select>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Your Message</legend>
+                                        <label for="message">Message</label>
+                                        <textarea name="message" id="message" placeholder="How can we help you? What are you interested in? I wanted to place a pre-order for..." rows="3"  required minlength="10"></textarea>
+                                    </fieldset>
+                                        <button type="submit" value="Send Message" >Send Message</button>
+                                        <button type="reset" value="Reset" />Reset</button>
+                                </form>
+                        </div>
+
                     
                     </section>
             </div>

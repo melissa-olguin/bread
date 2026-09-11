@@ -12,7 +12,7 @@ html, body, div, h1, h2, h3, p, form, input, button {
 }
 h1{
 
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
 }
 h2 {
@@ -40,29 +40,43 @@ a {
 
 #header {
 
-    padding: 1 em;
+    padding: 0px;
     text-align: center;
+    margin: 0;
 }
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 4em;
+    font-size: 2em;
     color: #684637;
     background-color:  #7d7e77ee;
     border-radius: 8px;
+    padding: 0 10px;
+    gap: 10px;
 }
 /* logo colors are dark brown #684637 and  light #c19e84 */
-/* logo colors are orange #684637 and  yellow #ffcc00 */
+/* yellow #ffcc00 */
 /* logo colors are tan  #ebaa79 and  light #c19e84 */
 /* logo colors are gray like store #7d7e77 and  light #c19e84 */
 .logo {
-    width: 2.5em; 
+    width: 3.5em; 
     height: auto; 
     display: block;
+    
 
 }
+@media (min-width: 768px) {
+  .logo-container {
+    font-size: 2.75em; 
+  }
+
+  .logo {
+    width: 2.5em; 
+  }
+}
+
 .star {
     color: #e6b16b; 
 }
@@ -101,14 +115,7 @@ a {
     background-image: linear-gradient(to right, #e6b16bee, #c19e84ee); 
     border-radius: 8px;
 }
-/*want home call to action buttons but not real buttons*/
-.homeCall{
-    font-size: 2rem;
-    margin:.5rem;
-    padding:.25rem;
-    border: 2px solid #ffcc00;
-    background-color: #ffcc00cb;
-}
+
 /* I Hate Nav bars don't waste any more time on this */
 
 nav {
@@ -241,7 +248,7 @@ input, textarea, select {
 
 button {
     background-color: #7d7e77e0;
-    color: #e6b16b;
+    color: #ffcc00ee;
     padding: 0.75rem 1.5rem;
     margin: .5rem 1rem;
     border: none;
@@ -251,6 +258,6 @@ button {
 }
 
 button:hover {
-    background-color: #7d7e77;
-    color: #ffcc00;
+    background-color: #ffcc00d8;
+    color:  #7d7e77;
 }

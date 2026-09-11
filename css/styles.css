@@ -79,6 +79,8 @@ a {
 
 .star {
     color: #e6b16b; 
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
 }
 
 #footer {
@@ -114,6 +116,10 @@ a {
     padding: 2rem;
     background-image: linear-gradient(to right, #e6b16bee, #c19e84ee); 
     border-radius: 8px;
+}
+.container p{
+     font-family: "Caveat", cursive;
+     font-size: 2em;
 }
 
 /* I Hate Nav bars don't waste any more time on this */
@@ -169,6 +175,7 @@ nav a {
 nav a:hover {
     background-color:  #918d81ee; 
     color: #ffcc00; 
+    border: 2px solid #ffcc00;
 }
 
 @media  screen and (min-width: 768px) {
@@ -200,6 +207,10 @@ video {
   width: 100%;
   height: auto;
 }
+#products p{
+    font-family: Arial, sans-serif;
+}
+
 
 /*form stuff */
 form {

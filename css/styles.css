@@ -79,8 +79,10 @@ a {
 
 .star {
     color: #e6b16b; 
-    font-family: "Caveat", cursive;
+    font-family: "Charm", cursive;
+    font-weight: 700;
     font-optical-sizing: auto;
+    font-style: normal;
 }
 
 #footer {
@@ -118,7 +120,8 @@ a {
     border-radius: 8px;
 }
 .container p{
-     font-family: "Caveat", cursive;
+     font-family: "Charm", cursive;
+     font-weight: 700;
      font-size: 2em;
 }
 
@@ -145,7 +148,7 @@ nav ul {
     width: 100%;
 }
 
-nav li {/* missing link to fix nav to hours to find */
+nav li {
     flex: 1 1 0;
     width: 100%;
     box-sizing: border-box;
@@ -167,7 +170,7 @@ nav a {
     border: 1px solid #684637;
     white-space: nowrap;
     box-sizing: border-box;
-    text-size: 1.2em;
+    font-size: 1.2em;
     border-radius: 8px;
 
 
@@ -257,7 +260,26 @@ input, textarea, select {
     border-radius: 4px;
     font-size: 1.75rem;
 }
+/*form valication */
+input.invalid, textarea.invalid, select.invalid {
+    border: 2px solid #b3261e !important;
+    background-color: #fff0f0;
+}
 
+.error-msg {
+    color: #b3261e;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    min-height: 1.5rem;
+    display: block;
+}
+
+.form-field {
+    margin-bottom: 1.5rem;
+}
+
+/*buttons */
 button {
     background-color: #7d7e77e0;
     color: #ffcc00ee;
@@ -273,3 +295,191 @@ button:hover {
     background-color: #ffcc00d8;
     color:  #7d7e77;
 }
+
+            .count-button {
+                background:#684637; 
+                color: #ffcc00; 
+                border: none;
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            .remove-button {
+                background: #ffcc00; 
+                color: #684637;
+                border: none;
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            .remove-button:hover {
+                background: #f12020; 
+            }
+
+            /* filter section*/
+
+            #filter-note {
+                text-align: center;
+                color: #684637;
+                font-size: 1.1rem;
+                font-style: italic;
+                margin-bottom: 1rem;
+            }
+
+            #filter-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                justify-content: center;
+                margin: 1.5rem 0;
+            }
+
+            @media (min-width: 768px) {
+                #filter-section {
+                    flex-direction: row;
+                }
+            }
+            @media (max-width: 767px) {
+                #filter-section {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            .filter-button {
+                background: #fff;
+                color: #684637;
+                border: 2px solid #684637;
+                padding: 0.75rem 1.5rem;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 1.1rem;
+    
+
+            .filter-button-active {
+                background: #684637;
+                color: #ffcc00;
+                font-weight: bold;
+                border-color: #684637;
+            }
+
+            @media (max-width: 767px) {
+              
+                .filter-button {
+                    width: 100%;
+                    max-width: 200px;
+                    text-align: center;
+                    background: #fff; 
+                    color: #684637; 
+                    border: 2px solid #684637; 
+                    padding: 0.75rem 1.5rem; 
+                    border-radius: 4px; cursor: 
+                    pointer; font-size: 1.1rem;
+
+                }
+                .filter-button-active {
+                    width: 100%;
+                    max-width: 200px;
+                    text-align: center;
+                    background: #684637; 
+                    color: #ffcc00; 
+                    border: 2px solid #684637; 
+                    padding: 0.75rem 1.5rem; 
+                    border-radius: 4px; 
+                    cursor: pointer; 
+                    font-size: 1.1rem; 
+                    font-weight: bold;
+                    
+                }
+                
+            }
+
+
+            /* Product Cards */ 
+            /* start here*/
+            .card {
+                background: #fff2e1;
+                padding: 1rem;
+                border-radius: 4px;
+                border: 2px solid #684637;
+                text-align: center;
+            }
+
+            .card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .card p {
+                font-family: Arial, sans-serif;
+                margin-bottom: 0.25rem;
+            }
+
+            .add-button {
+                font-size: 1rem;
+                text-wrap: nowrap;
+            }
+
+      
+            
+
+            /* Wishlist Items */
+            #wishlist-display {
+                background: #c19e84;
+                padding: 1.5rem;
+                border-radius: 8px;
+                margin: 1.5rem 0;
+                border: 2px dashed #684637;
+            }
+
+            .wish-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem;
+                background: #e6b16b;
+                margin-bottom: 0.5rem;
+                border-radius: 4px;
+            }
+
+            .wish-item-name { font-weight: bold; }
+
+            .wish-controls {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .wish-qty {
+                font-weight: bold;
+                min-width: 10px;
+                text-align: center;
+            }
+
+            /* Price Calculator */
+            #price-calculator {
+                background: #7d7e77e0;
+                padding: 1rem;
+                border-radius: 6px;
+                margin-top: 1rem;
+            }
+
+            .calc-line {
+                display: flex;
+                justify-content: space-between;
+                padding: 0.25rem 0;
+                color: #ffcc00;
+            }
+
+            #calc-total {
+                border-top: 2px solid #ffcc00;
+                padding-top: 0.5rem;
+                margin-top: 0.5rem;
+                font-weight: bold;
+                color: #ffcc00;
+                font-size: 1.5em;
+            }

@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Charm:wght@400;700&display=swap" rel="stylesheet">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">   
@@ -37,14 +38,111 @@
             <!-- Main -->
             <div id="main">
 
-                <!--contact form-->
+                <!--contact pg-->
                     <section class="contact">
                         <div class="container">
+                            <!-- Wishlist & Order Builder -->
+                                    <section id="wishlist-section" style="background: #e6b16bee; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 2px solid #684637;">
+                                        <h2 style="color: #684637; border-bottom: 2px solid #ffcc00;">Our Products</h2>
+                                        <!-- Filter Buttons -->
+                                        <div id="filter-section" style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+                                            <button class="filter-button" data-category="All" style="background: #684637; color: #ffcc00; border: 2px solid #684637; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 1.1rem; font-weight: bold;">All</button>
+                                            <button class="filter-button" data-category="Breads" >Breads</button>
+                                            <button class="filter-button" data-category="Pastries" >Pastries</button>
+                                            <button class="filter-button" data-category="Cookies" >Cookies</button>
+                                            <button class="filter-button" data-category="Cakes" >Cakes</button>
+                                        </div>
+                                        <p id="filter-note" style="text-align: center; color: #684637; font-size: 1.1rem; font-style: italic; margin-bottom: 1rem;"></p>
+
+                                        <!-- Product Grid -->
+                                        <div id="product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                                            <!-- Products will show up here -->
+                                        </div>
+
+                                        <!-- Wishlist Display -->
+                                        <div id="wishlist-display" style="background: #c19e84; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 2px dashed #684637;">
+                                            <h3 style="margin-bottom: 1rem;">Your Wishlist Order</h3>
+                                            <div id="wishlist-items" style="min-height: 50px; ">
+                                                <p>Add items above!</p>
+                                            </div>
+                                            
+                                            <!-- Price Calculator -->
+                                            <div id="price-calculator" style="background: #7d7e77e0; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                                                <h3>Estimated Total</h3>
+                                                <div id="calc-lines" ></div>
+                                                <div id="calc-total">
+                                                    Total: <span id="total-price">$0.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Order Message Generator -->
+                                        <div id="order-message-section" style="background: #c19e84; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+                                            <h3>📋 Copy Your Order</h3>
+                                            <p>
+                                                Click "Copy Order" and paste it into the message box below, or send it via text/email.
+                                            </p>
+                                            <textarea id="order-message" readonly style="width: 100%; min-height: 150px; padding: 1rem; border: 2px solid #684637; border-radius: 4px; font-family: monospace; font-size: 1rem; background: #fff; color: #684637;"></textarea>
+                                            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                                                <button id="copy-button" onclick="copyOrder()" style="background: #684637; color: #ffcc00; padding: 1rem 2rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1.2rem;">
+                                                    📄 Copy Order
+                                                </button>
+                                                <button onclick="insertIntoForm()" style="background: #ffcc00; color: #684637; padding: 1rem 2rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1.2rem;">
+                                                    ✍️ Insert Into Form
+                                                </button>
+                                                <button onclick="clearWishlist()" style="background: #b3261e; color: #fff; padding: 1rem 2rem; border: none; border-radius: 4px; cursor: pointer; font-size: 1.2rem;">
+                                                    🗑️ Clear All
+                                                </button>
+                                            </div>
+                                            <p id="copy-status" style="color: #2e7d32; font-weight: bold; margin-top: 1rem; min-height: 1.5rem;"></p>
+                                        </div>
+                                    </section>
+                                                            
+                            
+
+                            
+                         <!--Form-->
+                                <!-- not sure if I will create a real form, save for later use  -->
+                            <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
+                            -->
+                                <!-- example form <form action="/submit" method="post"> -->
+                                <form name="contact" action="/submit" method="POST" netlify>
+                                    <h2>Pre-Order and Inquiry Form</h2>
+                                        <fieldset>
+                                            <legend>Your Information</legend>
+                                            <label for="name">Full Name</label>
+                                            <input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middle Last Name"/>
+
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" required placeholder="your.email@gmail.com"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Request Details</legend>
+                                            <label for="pickup-date">Pickup Date</label>
+                                            <input type="date" id="pickup-date" name="pickup_date">
+
+                                            <label for="request-type">Request Type</label>
+                                                <select id="request-type" name="request_type">
+                                                    <option value="preorder">Pre-Order</option>
+                                                    <option value="question">General Question</option>
+                                                    <option value="event">Event Inquiry</option>
+                                                </select>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Your Message</legend>
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" placeholder="How can we help you? What are you interested in? I wanted to place a pre-order for..." rows="3"  required minlength="10"></textarea>
+                                        </fieldset>
+                                        
+                                            <button type="submit" value="Send Message" >Send Message</button>
+                                            <button type="reset" value="Reset" />Reset</button>
+
+                                </form>
                                 <h2>Our Location</h2>
                                 <a href="products.html">
                                     <img src="images/bakery-storefront_c.png" alt="A picture of our lovely storefront.  Come visit us!" class="image featured" />
                                 </a >
-                                
+                                <!--wanted to add fake address-->
                                 <a href="https://www.google.com/maps/search/?api=1&query=123+Main+St,+Springfield,+IL+62701">
                                 <p>123 Main St, Springfield, IL </p>
                                 <p>Click to open in Google Maps</p>
@@ -52,38 +150,41 @@
                                 <h2>Our Hours</h2>
                                 <h3>Mon - Thur 10 am - 4 pm</h3>
                                 <h3>Fri - Sun  10 am - 6 pm</h3>
-                            <!-- not sure if I will create a real form, save for later use  -->
+                            
+                         <!--Form-->
+                                
                             <!--<form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
                             -->
-                                <form action="/submit" method="post">
-                                <h2>Pre-Order and Inquiry Form</h2>
-                                    <fieldset>
-                                        <legend>Your Information</legend>
-                                        <label for="name">Full Name</label>
-                                        <input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middle Last Name"/>
+                                <!-- example form <form action="/submit" method="post"> -->
+                                <form name="contact" action="/submit" method="POST" netlify>
+                                    <h2>Pre-Order and Inquiry Form</h2>
+                                        <fieldset>
+                                            <legend>Your Information</legend>
+                                            <label for="name">Full Name</label>
+                                            <input type="text" name="name" id="name" required minlength="2" maxlength="100" placeholder="First Middle Last Name"/>
 
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email" required placeholder="your.email@gmail.com"/>
-                                    </fieldset>
-                                    <fieldset>
-                                        <legend>Request Details</legend>
-                                        <label for="pickup-date">Pickup Date</label>
-                                        <input type="date" id="pickup-date" name="pickup_date">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" required placeholder="your.email@gmail.com"/>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Request Details</legend>
+                                            <label for="pickup-date">Pickup Date</label>
+                                            <input type="date" id="pickup-date" name="pickup_date">
 
-                                        <label for="request-type">Request Type</label>
-                                            <select id="request-type" name="request_type">
-                                                <option value="preorder">Pre-Order</option>
-                                                <option value="question">General Question</option>
-                                                <option value="event">Event Inquiry</option>
-                                            </select>
-                                    </fieldset>
-                                    <fieldset>
-                                        <legend>Your Message</legend>
-                                        <label for="message">Message</label>
-                                        <textarea name="message" id="message" placeholder="How can we help you? What are you interested in? I wanted to place a pre-order for..." rows="3"  required minlength="10"></textarea>
-                                    </fieldset>
-                                        <button type="submit" value="Send Message" >Send Message</button>
-                                        <button type="reset" value="Reset" />Reset</button>
+                                            <label for="request-type">Request Type</label>
+                                                <select id="request-type" name="request_type">
+                                                    <option value="preorder">Pre-Order</option>
+                                                    <option value="question">General Question</option>
+                                                    <option value="event">Event Inquiry</option>
+                                                </select>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Your Message</legend>
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" placeholder="How can we help you? What are you interested in? I wanted to place a pre-order for..." rows="3"  required minlength="10"></textarea>
+                                        </fieldset>
+                                            <button type="submit" value="Send Message" >Send Message</button>
+                                            <button type="reset" value="Reset" />Reset</button>
                                 </form>
                         </div>
 

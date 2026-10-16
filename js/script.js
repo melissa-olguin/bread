@@ -10,7 +10,7 @@ const products = [
     { id: 5, name: "Butter Croissant",          category: "Pastries",   unitPrice: 4 },
     { id: 8, name: "Chocolate Croissant",       category: "Pastries",   unitPrice: 4 },
     { id: 6, name: "Cinnamon Roll",             category: "Pastries",   unitPrice: 4 },
-    { id: 7, name: "6pk Cinnamon Rolls",        category: "Pastries",   unitPrice: 19 },
+    { id: 7, name: "Morning Buns",              category: "Pastries",   unitPrice: 4 },
     { id: 9, name: "6pk Assorted Pastries",     category: "Pastries",   unitPrice: 19 },
 
     { id: 10, name: "Double Chocolate Cookie",   category: "Cookies",    unitPrice: 3 },
@@ -75,7 +75,7 @@ function renderProducts() {
     grid.innerHTML = "";
     
     if (filtered.length === 0) {
-        grid.innerHTML = '<p style="text-size: 1em;">No items in this category.</p>';
+        grid.innerHTML = '<p style="font-size: 1em;">No items in this category.</p>';
     } else {
         filtered.forEach(product => {
             const card = document.createElement("div");
@@ -84,7 +84,7 @@ function renderProducts() {
             
             card.className = "card";
             card.innerHTML = `
-                <h3>${product.name}</h4>
+                <h2>${product.name}</h2>
                 <p>${product.category}</p>
                 <p>$${product.unitPrice}</p>
                 <button style="text-size: 1rem; text-wrap: nowrap;" onclick="addToWishlist(${product.id})" >
@@ -94,6 +94,7 @@ function renderProducts() {
             grid.appendChild(card);
         });
     }
+    
 
     // filter button color changes on click 
     filterButtons.forEach(button => {
@@ -101,7 +102,7 @@ function renderProducts() {
             button.style.background = "#684637";
             button.style.color = "#ffcc00";
         } else {
-            button.style.background = "#fff";
+            button.style.background = "#ebcca4";
             button.style.color = "#684637";
         }
         // attach listener if not already attached
@@ -201,7 +202,7 @@ function renderWishlist() {
                 <span>$${lineTotal.toFixed(2)}</span>
             </div>`;
     });
-
+  
     // --- Update DOM ---
     container.innerHTML = html;
     if (calcLines) calcLines.innerHTML = calcHtml;

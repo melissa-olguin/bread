@@ -260,7 +260,7 @@ function initForm() {
         if (validateForm()) {
             // If everything is valid, allow the form to submit to Netlify
             // If valid, you can submit the form here:
-            form.submit(); 
+            //form.submit(); 
             alert("Form is valid! (Submission paused for demo)");
         } else {
             // Scroll to first error

@@ -260,8 +260,9 @@ function initForm() {
         if (validateForm()) {
             // If everything is valid, allow the form to submit to Netlify
             // If valid, you can submit the form here:
-            //form.submit(); 
-            alert("Form is valid! (Submission paused for demo)");
+            form.submit(); 
+            // e.target.submit(); 
+            //alert("Form is valid! (Submission paused for demo)");
         } else {
             // Scroll to first error
             const firstError = document.querySelector(".invalid");
@@ -352,6 +353,23 @@ function validateForm() {
     }
     
     return isValid;
+}
+
+function setMinDate() {
+    const dateInput = document.getElementById("pickup-date");
+    if (dateInput) {
+        // Calculate 2 days from now
+        const minDate = new Date();
+        minDate.setDate(minDate.getDate() + 2);
+        
+        // Format as YYYY-MM-DD for the HTML 'min' attribute
+        const year = minDate.getFullYear();
+        const month = String(minDate.getMonth() + 1).padStart(2, '0');
+        const day = String(minDate.getDate()).padStart(2, '0');
+        
+        // Set the minimum selectable date
+        dateInput.min = `${year}-${month}-${day}`;
+    }
 }
 
 function showError(field, errorElement, message) {

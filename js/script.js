@@ -310,6 +310,7 @@ function validateForm() {
     }
     
         // 3. Validate Pickup Date (Required + Min 2 Days)
+
     const pickupDate = document.getElementById("pickup-date");
     const dateError = document.getElementById("pickup-date-error");
     
@@ -325,12 +326,13 @@ function validateForm() {
         
         // Set the time to 00:00:00 so we compare dates only, not times
         today.setHours(0, 0, 0, 0);
+     
+     // Parse the selected date as LOCAL midnight (not UTC!)
+        const [year, month, day] = pickupDate.value.split('-').map(Number);
+    // Create a new Date object using the local year, month, and day, javaScript months are 0-indexed, so we subtract 1 from the month
+        const selectedDate = new Date(year, month - 1, day);
         
-        // Parse the user's selected date
-        const selectedDate = new Date(pickupDate.value);
-        
-        // If the selected date is BEFORE the calculated minimum date
-        if (selectedDate < today) {
+        if (selectedDate < minDate) {
             showError(pickupDate, dateError, "Pickup must be at least 2 days from now");
             isValid = false;
         }

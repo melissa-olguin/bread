@@ -27,7 +27,7 @@ const products = [
 let wishlist = [];
 let activeFilter = "All";
 
-// initialize all funtions 
+// initialize all functions on page load 
 
 function init() {
     loadWishlist();
@@ -35,6 +35,7 @@ function init() {
     renderProducts();
     renderWishlist();
     initForm();
+    setMinDate();
 }
 
 // A. Filter buttons logic
@@ -236,12 +237,14 @@ function loadWishlist() {
 // Initialize form validation
 
 function initForm() {
+     // Find the form by ID
     const form = document.getElementById("contact-form");
     if (!form) return;
 
     // Clear errors on reset
     const resetButton = document.getElementById("reset-button");
     if (resetButton) {
+        // Small delay ensures the reset happens before we clear errors
         resetButton.addEventListener("click", function() {
             setTimeout(() => {
                 clearFormErrors();
@@ -249,13 +252,15 @@ function initForm() {
         });
     }
 
-    // Handle Submit
+    // Handle Form Submission
     form.addEventListener("submit", function(e) {
-        e.preventDefault(); // Stop default submission to validate
+        e.preventDefault(); // Stop the form from sending immediately
         
+        // Run validation
         if (validateForm()) {
+            // If everything is valid, allow the form to submit to Netlify
             // If valid, you can submit the form here:
-            // form.submit(); 
+            form.submit(); 
             alert("Form is valid! (Submission paused for demo)");
         } else {
             // Scroll to first error
@@ -268,11 +273,18 @@ function initForm() {
 }
 
 
-
+// Helper to clear all error styles and text
 function clearFormErrors() {
     document.querySelectorAll(".error-msg").forEach(el => el.textContent = "");
     document.querySelectorAll("input, textarea, select").forEach(el => el.classList.remove("invalid"));
 }
+
+//D. Helper to show a specific error
+function showError(field, errorElement, message) {
+    if (field) field.classList.add("invalid"); // Adds red border
+    if (errorElement) errorElement.textContent = message; // Adds red text
+}
+
 //D.  Form validation
 function validateForm() {
     let isValid = true;
@@ -289,20 +301,36 @@ function validateForm() {
     // 2. Validate Email
     const email = document.getElementById("email");
     const emailError = document.getElementById("email-error");
+    // [^\s@]+: Matches one or more characters that are not whitespace and not an @ symbol
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email.value.trim())) {
         showError(email, emailError, "Please enter a valid email address");
         isValid = false;
     }
     
-    // 3. Validate Pickup Date
+        // 3. Validate Pickup Date (Required + Min 2 Days)
     const pickupDate = document.getElementById("pickup-date");
     const dateError = document.getElementById("pickup-date-error");
-    if (pickupDate.value) {
-        const minDate = new Date();
-        minDate.setDate(minDate.getDate() + 2); // At least 2 days from now
-        if (new Date(pickupDate.value) < minDate) {
-            showError(pickupDate, dateError, "Pickup date must be in the future");
+    
+    if (!pickupDate.value) {
+        showError(pickupDate, dateError, "Pickup date is required");
+        isValid = false;
+    } else {
+        // Create a date object for "Today" at midnight
+        const today = new Date();
+        
+        // Add 2 days to today
+        today.setDate(today.getDate() + 2);
+        
+        // Set the time to 00:00:00 so we compare dates only, not times
+        today.setHours(0, 0, 0, 0);
+        
+        // Parse the user's selected date
+        const selectedDate = new Date(pickupDate.value);
+        
+        // If the selected date is BEFORE the calculated minimum date
+        if (selectedDate < today) {
+            showError(pickupDate, dateError, "Pickup must be at least 2 days from now");
             isValid = false;
         }
     }

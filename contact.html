@@ -46,7 +46,7 @@
                                         <h2>Our Products</h2>
                                         <!-- Filter Buttons -->
                                         <div id="filter-section">
-                                            <button class="filter-button" data-category="All" style="background: #684637; color: #ffcc00;">All</button>
+                                            <button class="filter-button" data-category="All" >All</button>
                                             <button class="filter-button" data-category="Breads" >Breads</button>
                                             <button class="filter-button" data-category="Pastries" >Pastries</button>
                                             <button class="filter-button" data-category="Cookies" >Cookies</button>
@@ -87,7 +87,7 @@
                             -->
                                 <!-- example form <form action="/submit" method="post"> -->
                                 
-                                <form name="contact" netlify-honeypot="bot-field" method="POST" netlify>
+                                <form name="bread-contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" id="contact-form">
                                     <h2>Pre-Order and Inquiry Form</h2>
                                         <fieldset>
                                             <legend>Your Information</legend>
@@ -104,7 +104,7 @@
                                             <legend>Request Details</legend>
                                             
                                             <label for="pickup-date">Pickup Date</label>
-                                            <input type="date" id="pickup-date" name="pickup_date"/>
+                                            <input type="date" id="pickup-date" name="pickup_date" required/>
                                             <span class="error-msg" id="pickup-date-error"></span>
 
                                             <label for="request-type">Request Type</label>
@@ -122,6 +122,10 @@
                                         
                                             <button type="submit" value="Send Message" >Send Message</button>
                                             <button type="reset" value="Reset" >Reset</button>
+                                            <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                            <div data-netlify-recaptcha="true"></div>
+                                            
+                                                         
 
                                 </form>
                              
